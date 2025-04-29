@@ -88,19 +88,32 @@
         <h1>Web Form</h1>
 
         <label for="fullname">Full Name:</label>
-        <input type="text" id="fullname" name="fullname" required placeholder="Enter Full Name">
+        <input type="text" id="fullname" name="fullname" required 
+            pattern="[A-Za-z\s]{3,}" 
+            title="Full Name should be at least 3 letters and contain only alphabets and spaces"
+            placeholder="Enter Full Name">
 
         <label for="phone">Contact Number:</label>
-        <input type="tel" id="phone" name="phone" required placeholder="Enter Phone Number">
+        <input type="tel" id="phone" name="phone" required 
+            pattern="[0-9]{10}" z
+            maxlength="10"
+            title="Enter a valid 10-digit phone number" 
+            placeholder="Enter Phone Number">
 
         <label for="address">Address:</label>
-        <textarea id="address" name="address" required placeholder="Type your address here"></textarea>
+        <textarea id="address" name="address" required 
+            minlength="10" 
+            title="Address should be at least 10 characters"
+            placeholder="Type your address here"></textarea>
 
         <label for="company">Company Name:</label>
-        <input type="text" id="company" name="company" required placeholder="Enter Company Name">
+        <input type="text" id="company" name="company" required 
+            minlength="2" 
+            placeholder="Enter Company Name">
 
         <label for="email">Email Address:</label>
-        <input type="email" id="email" name="email" required placeholder="Enter Email Address">
+        <input type="email" id="email" name="email" required 
+            placeholder="Enter Email Address">
 
         <label for="department">Department:</label>
         <select id="department" name="department" required>
