@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        form {
+            background: white;
+            padding: 20px 25px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2); /* Stronger shadow */
+            width: 350px; /* Slightly narrower */
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 24px;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin: 8px 0 4px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 13px;
+            box-sizing: border-box;
+        }
+        textarea {
+            resize: vertical;
+            height: 60px; /* Reduced height */
+        }
+        .gender-options {
+            margin-bottom: 20px;
+        }
+        .gender-options input {
+            margin-right: 5px;
+        }
+        .gender-options label {
+            display: inline;
+            margin-right: 10px;
+            font-weight: normal;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #4285f4;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 15px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        input[type="submit"]:hover {
+        background-color: #357ae8;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* Button hover effect */
+        transform: translateY(-3px);
+        }
+
+    </style>
+</head>
+<body>
+
+    <form method="post">
+        <h1>Web Form</h1>
+
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" required placeholder="Enter Full Name">
+
+        <label for="phone">Contact Number:</label>
+        <input type="tel" id="phone" name="phone" required placeholder="Enter Phone Number">
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" required placeholder="Type your address here"></textarea>
+
+        <label for="company">Company Name:</label>
+        <input type="text" id="company" name="company" required placeholder="Enter Company Name">
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required placeholder="Enter Email Address">
+
+        <label for="department">Department:</label>
+        <select id="department" name="department" required>
+            <option value="">-- Select Department --</option>
+            <option value="hr">HR</option>
+            <option value="sales">Sales</option>
+            <option value="development">Development</option>
+            <option value="marketing">Marketing</option>
+            <option value="others">Others</option>
+        </select>
+
+        <label>Gender:</label>
+        <div class="gender-options">
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Male</label>
+
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+
+            <input type="radio" id="prefer-not-to-say" name="gender" value="prefer not to say">
+            <label for="prefer-not-to-say">Prefer not to say</label>
+        </div>
+
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>
